@@ -1,0 +1,52 @@
+<div class="row offset-top">
+	<div class="col-md-4">
+		{{#if list}}
+			{{#link-to 'lunchlist.new' classNames='btn btn-lunch'}}
+				Dodaj jelo
+			{{/link-to}}	
+		{{else}}	
+			<h2>Unesite obavezna polja:</h2>	
+		{{/if}}
+		
+		<hr>
+
+		{{outlet}}
+	</div>
+	
+	<div class="col-md-8">
+		<div class="row">
+			<div class="col-md-12 offset-bottom">
+				<form class="form-inline pull-right">
+			    <div class="form-group">
+			    	{{input type="text" id="search" class="form-control" value=filter placeholder="Search.."}}
+				  </div>			
+
+				  <button class="btn btn-default">Search</button>	
+				</form>  
+			</div>
+		</div>
+		{{#unless sortedLunchlist}}
+			<div class="well">
+				<h3 class="empty-msg">Lista jela je prazna...</h3>
+			</div>	
+		{{/unless}}
+
+		{{#if filter}}
+			{{#each filteredLunchlist as |lunch|}}
+				<div class="well">
+					<h3 class="capitalize">{{lunch.title}} <span class="label label-primary pull-right">{{format-date lunch.date}}</span></h3>
+					<p>{{lunch.body}}</p>
+					<p class="text-right"><i>Added by: {{lunch.author}}</i></p>
+				</div>
+			{{/each}}		
+		{{else}}
+			{{#each sortedLunchlist as |lunch|}}
+				<div class="well">
+					<h3 class="capitalize">{{lunch.title}} <span class="label label-primary pull-right">{{format-date lunch.date}}</span></h3>
+					<p>{{lunch.body}}</p>
+					<p class="text-right"><i>Added by: {{lunch.author}}</i></p>
+				</div>
+			{{/each}}		
+		{{/if}}
+	</div>
+</div>
