@@ -7,6 +7,10 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('lunchlist', function() {
+    this.route('edit', { path: '/edit/lunch_id' });
+    this.route('new');
+  });
 });
 
 export default Router;

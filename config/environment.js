@@ -4,6 +4,13 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'lunchlist',
     environment: environment,
+    contentSecurityPolicy: { 'connect-src': "'self' wss://*.firebaseio.com" },
+    firebase: {
+      apiKey: "AIzaSyDx3BoYjStEGp-WSfmz2crTlfgOeZbfOHU",
+      authDomain: "lunchlist-91e93.firebaseapp.com",
+      databaseURL: "https://lunchlist-91e93.firebaseio.com",
+      storageBucket: "lunchlist-91e93.appspot.com",
+    },
     rootURL: '/',
     locationType: 'auto',
     EmberENV: {

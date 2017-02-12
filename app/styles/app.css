@@ -1,0 +1,64 @@
+p, h1, h2, h3, h4 {
+	margin: 0 0 10px 0;
+	padding: 0;
+	line-height: normal;
+}
+
+body {
+	margin: 51px 0 0;
+	-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.btn-lunch {
+	color: white;
+	background-color: #f79257;
+	padding: 10px 20px;
+	font-size: 16px;
+}
+
+.logo-img {
+	height: 40px;
+	margin: -10px 0 0;
+}
+
+.description {
+	padding: 20px;
+}
+
+.empty-msg {
+	text-align: center;
+	margin: 0;
+}
+
+.btn-lunch:hover {
+	color: white;
+	background-color: #f79233;
+}
+
+.offset-top {
+	margin-top: 20px;
+}
+
+.offset-bottom {
+	margin-bottom: 20px;
+}
+
+.msg {
+	position: fixed;
+	text-align: center;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	top: 40px;
+	width: 350px;
+	color: white;
+	padding: 15px;
+  border-radius: 4px;
+  z-index: 10000;
+  box-shadow: 2px 3px 2px #cccccc;
+}
+
+.msg.error {
+	background-color: #fa1212;
+}
