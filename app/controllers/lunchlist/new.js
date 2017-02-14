@@ -10,7 +10,7 @@ export default Ember.Controller.extend({
 			var body = this.get('body');
 			var date = this.get('date');
 
-			if (author && title && body && date != '') {
+			if (author && title && body && date !== '') {
 
 				// Create new Lunch
 				var newLunch = this.store.createRecord('lunch', {
