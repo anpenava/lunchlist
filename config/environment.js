@@ -50,7 +50,8 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.serverURL = 'http://server193.web-hosting.com/';
+    ENV.documentDomain = 'lokidevelop.co/';
   }
 
   return ENV;
