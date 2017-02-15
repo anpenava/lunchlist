@@ -34,7 +34,7 @@
 		{{#if filter}}
 			{{#each filteredLunchlist as |lunch|}}
 				<div class="well">
-					<h3 class="capitalize">{{lunch.title}} <span class="label label-primary pull-right">{{format-date lunch.date}}</span></h3>
+					<h3 class="capitalize">{{lunch.title}} <span class="label label-primary pull-right">{{lunch.date}}</span></h3>
 					<p>{{lunch.body}}</p>
 					<p class="text-right"><i>Added by: {{lunch.author}}</i></p>
 				</div>
