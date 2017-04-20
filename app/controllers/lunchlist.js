@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
 	filter: '',
 	list: true,
-	sortedProperties: ['date:asc'],
+	sortedProperties: ['date:desc'],
 	sortedLunchlist: Ember.computed.sort('model', 'sortedProperties'),
 
 	filteredLunchlist: function() {
