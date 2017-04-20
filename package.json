@@ -1,7 +1,7 @@
 {
   "name": "lunchlist",
   "version": "0.0.0",
-  "description": "Small description for lunchlist goes here",
+  "description": "Simple lunchlist app",
   "license": "MIT",
   "author": "",
   "directories": {
