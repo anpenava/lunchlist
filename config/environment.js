@@ -12,7 +12,7 @@ module.exports = function(environment) {
       storageBucket: "lunchlist-91e93.appspot.com",
     },
     rootURL: '/',
-    locationType: 'auto',
+    locationType: 'hash',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -49,9 +49,10 @@ module.exports = function(environment) {
     ENV.APP.rootElement = '#ember-testing';
   }
 
-  if (environment === 'production') {
+  if (environment === 'production') {	
     ENV.serverURL = 'http://server193.web-hosting.com/';
     ENV.documentDomain = 'lokidevelop.co/';
+    ENV.apiEnvironment = 'production';     
   }
 
   return ENV;
